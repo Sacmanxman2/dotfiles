@@ -69,6 +69,16 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" Toggle DeadKeys set (for accent marks):
+    so ~/dotfiles/deadkeys.vim
+    nm <leader><leader>d :call ToggleDeadKeys()<CR>
+    imap <leader><leader>d <esc>: call ToggleDeadKeys()<CR>a
+
+" Source IPA shortcuts:
+    so ~/dotfiles/ipa.vim
+    nm <leader><leader>i :call ToggleIPA()<CR>
+    imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
+
 set encoding=utf-8
 
 set incsearch
@@ -95,8 +105,6 @@ let g:indentLine_char = '▏'
 autocmd FileType sass set tabstop=4
 autocmd FileType sass set shiftwidth=4
 autocmd BufNewFile,BufReadPost *.pug set filetype=pug
-
-" Vimwiki settings
 
 " vimwiki with markdown support
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}

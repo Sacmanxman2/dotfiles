@@ -4,11 +4,14 @@ export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 bindkey -v
 precmd() { RPROMPT="" }
 export KEYTIMEOUT=1
-export EDITOR=vim
+export EDITOR=nvim
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
+(cat ~/.cache/wal/sequences &)
+#source `jump-bin --zsh-integration`
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/jared/.oh-my-zsh
-  (wal -r -t &)
+export ZSH=/home/jared/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -101,11 +104,13 @@ source $ZSH/oh-my-zsh.sh
 alias yolo="trizen -Syu --noconfirm --noedit"
 alias yolod="trizen -Syuw --noconfirm --noedit"
 alias -g gp="| grep -i"
-alias v="vim" 
-alias zshconf="vim ~/dotfiles/zshrc"
-alias i3conf="vim ~/.config/i3/config"
-alias rangerconf="vim ~/.config/ranger/rc.conf"
-alias vimconf="vim ~/dotfiles/vimrc"
+alias v=$EDITOR
+alias n=$EDITOR
+alias zshconf="$EDITOR ~/dotfiles/zshrc"
+alias i3conf="$EDITOR ~/.config/i3/config"
+alias rangerconf="$EDITOR ~/.config/ranger/rc.conf"
+alias vimconf="$EDITOR ~/dotfiles/vimrc"
+alias nvimconf="$EDITOR ~/dotfiles/nvimrc"
 
 function empty-buffer-to-ls() {
     if [[ $#BUFFER == 0 ]]; then
