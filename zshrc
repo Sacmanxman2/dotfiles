@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+source ~/.profile
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:/snap/bin:$PATH"
 bindkey -v
 precmd() { RPROMPT="" }
 export KEYTIMEOUT=1
@@ -101,8 +102,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias yolo="trizen -Syu --noconfirm --noedit"
-alias yolod="trizen -Syuw --noconfirm --noedit"
+alias yolo="trizen -Syu --noconfirm --noedit --ignore=packettracer"
+alias yolod="trizen -Syuw --noconfirm --noedit --ignore=packettracer"
 alias -g gp="| grep -i"
 alias v=$EDITOR
 alias n=$EDITOR
