@@ -1,18 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 source ~/.profile
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:/snap/bin:$PATH"
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:/snap/bin:$PATH" 2> /dev/null
 bindkey -v
 precmd() { RPROMPT="" }
 export KEYTIMEOUT=1
 export EDITOR=nvim
-source /usr/share/fzf/key-bindings.zsh
-source /usr/share/fzf/completion.zsh
-(cat ~/.cache/wal/sequences &)
+source /usr/share/fzf/key-bindings.zsh 2> /dev/null
+source /usr/share/fzf/completion.zsh 2> /dev/null
+(cat ~/.cache/wal/sequences &) 2> /dev/null
 #source `jump-bin --zsh-integration`
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/jared/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
@@ -140,7 +140,7 @@ bindkey '^Z' foreground-vi
 
 # set special widget, see man zshzle
 zle -N zle-line-finish empty-buffer-to-ls
-alias config='/usr/bin/git --git-dir=/home/jared/.cfg/ --work-tree=/home/jared'
+alias config='/usr/bin/git --git-dir=~/.cfg/ --work-tree=~'
 alias ls=" ls"
 alias clear=" clear"
 alias pacaur=trizen
