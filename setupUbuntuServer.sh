@@ -41,7 +41,7 @@ case $yn in
 		echo 'source ~/dotfiles/tmux' > ~/.tmux.conf;
 		echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
 		echo 'source ~/dotfiles/vimrc' > ~/.vimrc;
-		mkdir ~/.config/nvim
+		mkdir -p ~/.config/nvim
 		echo 'source ~/dotfiles/nvimrc' > ~/.config/nvim/init.vim;;
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
