@@ -38,11 +38,11 @@ read -p "Install Jared's Dotfiles? [Y/n]" yn
 yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) git clone https://github.com/Sacmanxman2/dotfiles.git ~/dotfiles;
-		sudo echo 'source ~/dotfiles/tmux' > ~/.tmux.conf;
-		sudo echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
-		sudo echo 'source ~/dotfiles/vimrc' > ~/.vimrc;
-		sudo mkdir ~/.config/nvim
-		sudo echo 'source ~/dotfiles/nvimrc' > ~/.config/nvim/init.vim;;
+		echo 'source ~/dotfiles/tmux' > ~/.tmux.conf;
+		echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
+		echo 'source ~/dotfiles/vimrc' > ~/.vimrc;
+		mkdir ~/.config/nvim
+		echo 'source ~/dotfiles/nvimrc' > ~/.config/nvim/init.vim;;
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
 esac
