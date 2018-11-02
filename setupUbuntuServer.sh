@@ -38,9 +38,11 @@ read -p "Install Jared's Dotfiles? [Y/n]" yn
 yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) git clone https://github.com/Sacmanxman2/dotfiles.git ~/dotfiles;
+		sudo chown ~/.zshrc $USER
 		echo 'source ~/dotfiles/tmux' > ~/.tmux.conf;
 		echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
 		echo 'source ~/dotfiles/vimrc' > ~/.vimrc;
+		mkdir ~/.config
 		mkdir ~/.config/nvim
 		echo 'source ~/dotfiles/nvimrc' > ~/.config/nvim/init.vim;;
 	[Nn]* ) echo "skipping";;
