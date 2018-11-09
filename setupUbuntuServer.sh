@@ -2,7 +2,7 @@
 # Installs stuff to Ubuntu.
 
 sudo add-apt-repository universe
-sudo apt install tmux zsh curl git software-properties-common ranger
+sudo apt install tmux zsh curl git software-properties-common ranger unzip
 git config --global user.email "jake850@gmail.com"
 git config --global user.name "Jared Sackett"
 read -p "Install neovim ppa? [Y/n] " yn
