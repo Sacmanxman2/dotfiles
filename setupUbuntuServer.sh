@@ -55,4 +55,10 @@ case $yn in
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
 esac
-
+read -p "Install tmux plugins/themes?" yn
+yn=${yn:-Y}
+case $yn in
+	[Yy]* ) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;;
+	[Nn]* ) echo "Skipping" ;;
+	* ) echo "Please answer y or n";;
+esac
