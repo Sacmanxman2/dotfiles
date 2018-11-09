@@ -39,7 +39,7 @@ yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) git clone https://github.com/Sacmanxman2/dotfiles.git ~/dotfiles;
 		echo 'source ~/dotfiles/tmux.conf' > ~/.tmux.conf;
-		echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
+		sudo echo 'source ~/dotfiles/zshrc' > ~/.zshrc;
 		echo 'source ~/dotfiles/vimrc' > ~/.vimrc;
 		mkdir -p ~/.config/nvim
 		echo 'source ~/dotfiles/nvimrc' > ~/.config/nvim/init.vim;;
