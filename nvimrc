@@ -35,6 +35,9 @@ Plug 'carlitux/deoplete-ternjs', {'do': 'npm install -g tern'}
 Plug 'posva/vim-vue'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'flazz/vim-colorschemes'
 
 call plug#end()
 
@@ -60,8 +63,9 @@ filetype plugin indent on
 set hlsearch
 set incsearch
 
-" Colorscheme
-colorscheme wal
+" Pretty Stuff
+let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
 
 " move among buffers with CTRL
 noremap <C-J> :bnext<CR>
