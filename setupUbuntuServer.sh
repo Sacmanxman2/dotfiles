@@ -5,7 +5,7 @@ sudo add-apt-repository universe
 sudo apt install tmux zsh curl git software-properties-common ranger
 git config --global user.email "jake850@gmail.com"
 git config --global user.name "Jared Sackett"
-read -p "Install neovim ppa? [Y/n]" yn
+read -p "Install neovim ppa? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in 
     [Yy]* ) sudo apt-add-repository ppa:neovim-ppa/stable;
@@ -19,7 +19,7 @@ case $yn in
             sudo update-alternatives --config editor;;
     [Nn]* ) echo "skipping";;
 esac
-read -p "Install oh-my-zsh? [Y/n]" yn
+read -p "Install oh-my-zsh? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) sudo sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)";;
@@ -27,14 +27,14 @@ case $yn in
 	* ) echo "Please answer y or n";;
 esac
 cd ~
-read -p "Install neovim plugin manager? [Y/n]" yn
+read -p "Install neovim plugin manager? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim;;
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
 esac
-read -p "Install Jared's Dotfiles? [Y/n]" yn
+read -p "Install Jared's Dotfiles? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in 
 	[Yy]* ) git clone https://github.com/Sacmanxman2/dotfiles.git ~/dotfiles;
@@ -46,7 +46,7 @@ case $yn in
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
 esac
-read -p "Install neovim plugins? [Y/n]" yn
+read -p "Install neovim plugins? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in
 	[Yy]* ) pip2 install --user neovim;
@@ -55,7 +55,7 @@ case $yn in
 	[Nn]* ) echo "skipping";;
 	* ) echo "Please answer y or n";;
 esac
-read -p "Install tmux plugins/themes?" yn
+read -p "Install tmux plugins/themes? [Y/n] " yn
 yn=${yn:-Y}
 case $yn in
 	[Yy]* ) git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm;;
