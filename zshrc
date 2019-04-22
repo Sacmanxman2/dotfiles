@@ -61,7 +61,7 @@ HIST_IGNORE_SPACE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(you-should-use git autojump catimg common-aliases lol pip systemd web-search zsh-syntax-highlighting)
+plugins=(you-should-use git autojump catimg common-aliases lol pip systemd web-search thefuck zsh-syntax-highlighting)
 
 
 setopt correct
@@ -141,6 +141,9 @@ bindkey '^Z' foreground-vi
 # set special widget, see man zshzle
 zle -N zle-line-finish empty-buffer-to-ls
 alias config='/usr/bin/git --git-dir=~/.cfg/ --work-tree=~'
+alias fuck=' fuck --yeah'
+alias frell=' fuck --yeah'
+alias crap=' fuck'
 alias ls=" ls"
 alias clear=" clear"
 alias pacaur=trizen
